@@ -1,0 +1,199 @@
+.maindiv{
+    background-color:white;
+    border-style: double;
+    border-color: black;
+    width: 400px;
+    height: 550px;
+    border-radius: 30px;
+    box-shadow: 6cm;
+    margin-left: 180px;
+    margin-top: 30px;
+    }
+    
+    body {
+        background-image: url("/images/grenback.webp");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    
+      .heading{
+        font-family: Copperplate Gothic Bold;
+       font-size: 60px;
+        color:#59C555;
+        size: 10pt;
+        margin-left: 0cm;
+        margin-top: 0cm;
+        letter-spacing: 0.5ch;
+        text-decoration-line:overline;
+        text-decoration-line: underline;
+        text-decoration-style:double;
+      }
+    
+      .loginherebox{
+    
+        background-color:#5ECB4D;
+        border-style: double;
+        border-color: black;
+        width: 350px;
+        height: 80px;
+        border-radius: 30px;
+        box-shadow: 6cm;
+        margin-left: 0.6cm;
+        margin-top: 0.5cm;
+    
+    
+      }
+    
+      .loginhead{
+        font-family:Rockwell;
+       font-size: 30px;
+        color:white;
+        margin-left: 2.4cm;
+        margin-top: 0.5cm;
+    
+       
+      }
+    
+      .loginherebox2{
+    
+        background-color:#5ECB4D;
+        border-style: double;
+        border-color: black;
+        width: 350px;
+        height: 400px;
+        border-radius: 30px;
+        box-shadow: 6cm;
+        margin-left: 0.6cm;
+        margin-top: 0.5cm;
+    
+    
+      }
+    
+      .first{
+        display: flex;
+        flex-direction: row;
+      }
+    
+      .imgpart{
+        background-color:green;
+        border-style: double;
+        border-color: black;
+        width: 200px;
+        height: 250px;
+        border-radius: 30px;
+        box-shadow: 6cm;
+        margin-left: 0.6cm;
+        margin-top: 0.5cm;
+        background-image: url("/images/ss.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-left: 400px;
+        margin-top: 100px;
+       
+      }
+    
+      .second{
+      
+        background-color:white;
+        border-style: double;
+        border-color: black;
+        width: 200px;
+        height: 250px;
+        border-radius: 30px;
+        box-shadow: 6cm;
+        margin-left: 0cm;
+        margin-top: 2.5cm;
+      
+          }
+        ::placeholder{
+            color: white;
+        }
+      
+       /* label color */
+   .input-field label {
+    color: white;
+  }
+  /* label focus color */
+  .input-field input[type=text]:focus + label {
+    color: white;
+  }
+  /* label underline focus color */
+  .input-field input[type=text]:focus {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 white;
+  }
+  /* valid color */
+  .input-field input[type=text].valid {
+    border-bottom: 1px solid #000;
+    box-shadow: 0 1px 0 0 white;
+  }
+  /* invalid color */
+  .input-field input[type=text].invalid {
+    border-bottom: 1px solid white;
+    box-shadow: 0 1px 0 0 white;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: white;
+  }
+
+
+  .input-field .prefix ~ input{
+color: white;
+  width:calc(100% - 3rem)
+  }
+
+  *, *:before,*:after{
+color: white;
+  }
+
+
+  .loginherebox3{
+    
+    background-image: url("/images/ss.jpg");
+    border-style: double;
+    border-color: black;
+    width: 350px;
+    height: 350px;
+    border-radius: 30px;
+    box-shadow: 6cm;
+    margin-left: 0.6cm;
+    margin-top: 0.5cm;
+
+
+  }
+  .maindiv2{
+    background-color:#5ECB4D;
+    border-style: double;
+    border-color: black;
+    width: 400px;
+    height: 500px;
+    border-radius: 30px;
+    box-shadow: 6cm;
+    margin-left: 240px;
+    margin-top: 30px;
+  }
+
+  .headbox{
+
+    background-color:white;
+    border-style: double;
+    border-color: green;
+    width: 580px;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 6cm;
+    margin-left: 430px;
+    margin-top: 30px;
+   
+  }
+
+  .message{
+    font-size: 15pt;
+    color: red;
+    margin-left: 11px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+  }

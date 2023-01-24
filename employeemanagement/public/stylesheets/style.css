@@ -1,0 +1,137 @@
+.maincontainers{
+  display: flex;
+  justify-content:space-around
+  ;
+  align-items:space-around;
+  background-color: rgb(12, 128, 12);
+  height: 120vh;
+}
+
+.tablecontainers{
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  background-color:white;
+  height: 100vh;
+}
+
+.tablebox{
+  width: 1000px;
+  padding: 20px;
+  background-color:green;
+  border-radius:20px ;
+  height: 70vh;
+  border-color: black;
+  border-style:double;
+  display: flex;
+  
+  
+  }
+
+
+.box{
+width: 700px;
+padding: 20px;
+background-color: aliceblue;
+border-radius:20px ;
+height: 114vh;
+border-color: black;
+border-style:double;
+
+
+}
+
+.heading{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  width: 650px;
+ font-family: 'Times New Roman', Times, serif;
+    background-color: green;
+  border-radius: 20px;
+  border-top: 10px;
+  font-size: 35px;
+  font-weight:normal;
+  letter-spacing: 3px;
+  color: white
+}
+
+.button{
+display: flex;
+flex-direction: row;
+}
+
+.buttonstyle{
+  display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.home{
+  width:2000px;
+  height: 100px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: double;
+}
+
+.bbb{
+  width: 700px;
+  padding: 20px;
+  background-color: aliceblue;
+  border-radius:20px ;
+  height: 50vh;
+  border-color: black;
+  border-style:double;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+  }
+  .picbox{
+    width: 400px;
+    padding: 20px;
+    background-color:green;
+    border-radius:40px ;
+    height: 40vh;
+    border-color: black;
+    border-style:double;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+
+  .piccontainer{
+    margin-top: 100px;
+    width: 1000px;
+    padding: 20px;
+    background-color:wheat;
+    border-radius:20px ;
+    height: 80vh;
+    border-color: black;
+    border-style:double;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .mmm{
+    display: flex;
+    justify-content:center
+    ;
+    align-items:center;
+    background-color: rgb(12, 128, 12);
+    height: 100vh;
+  }
+  
+[type="radio"]:checked+span:after, [type="radio" ].with-gap:checked+span:after {
+  background-color: green;
+}
+

@@ -1,0 +1,87 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/stylesheets/login_page.css">
+</head>
+
+
+
+<body background="ll.jpg">
+    <form action="/admin/check_admin_login" method="post">
+        <div class="headbox">
+            <h1 class="heading">𝓟𝓢-𝓢𝓞𝓕𝓣𝓔𝓒𝓗</h1>
+        </div>
+
+        <div class="first">
+
+            <div class="maindiv2">
+                <div class="loginherebox3">
+                    <div style="margin-top: 400px; margin-left: 90px;">
+                        <div style="margin-left: -30px; margin-top: -20; font-size: medium;"> Didn't Have Account ?
+                            Register Here </div><br>
+                        <a href="/admin/sign_up_page"> 
+                            <button class="btn waves-effect waves-light" name="action"
+                                style="background-color:white; color: green; width: 140px;">Register
+                                <i class="material-icons right" style="color: green;">create</i></a>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="maindiv">
+                <div class="loginhereBOX">
+                    <div class="loginhead"> LOGIN HERE</div>
+
+                </div>
+                <div class="loginherebox2">
+
+                    <div class="row" style="margin-top: 50px;">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">assignment_ind
+                            </i>
+                            <input id="icon_prefix" type="text" name="Email_id" class="validate">
+                            <label for="icon_prefix">Email ID/Mobile No.</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock</i>
+                            <input id="icon_telephone" type="password" name="password" class="validate">
+                            <label for="icon_telephone">Password</label>
+                        </div>
+
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action"
+                        style="background-color: white; margin-left:3cm; color:green; margin-bottom: 0.5cm;">Submit
+                        <i class="material-icons right" style="color: green;">send</i>
+                    </button>
+
+                    <br>
+                    <div style="margin-left: 1.7cm; font-family:Rockwell; font-size: 17px;">Forget Password?
+                        Click Here
+                    </div>
+
+                    <div>
+                        <h6 class="message">
+                            <%=message%>
+                        </h6>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </form>
+</body>
+
+</html>

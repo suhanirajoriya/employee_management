@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.datepicker').datepicker();
+     
+    });
+
+
+    $('.datepicker').pickadate({
+      min: new Date(2015, 3, 20),
+      max: new Date(2015, 7, 14)
+    })
+  </script>
+  <script src="/javascripts/project.js"></script>
+
+
+  <script>
+    $(document).ready(function () {
+      $('select').formSelect();
+    });
+  </script>
+  <script>
+    function call() {
+      if (picture.value != '') {
+        alert("Record Submitted")
+      }
+      else {
+        alert("Record not Submitted")
+      }
+    }
+  </script>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <div>
+    <form method="post" action="/employee/submit_employee_record" enctype="multipart/form-data">
+      <div class="maincontainers">
+        <div class="box">
+          <!-- HEADING -->
+          <div class="row">
+            <div class="col s12 heading ">
+              Employee Register
+            </div>
+          </div>
+
+          <br>
+          <!-- FIRST INPUT LINE -->
+          <div class="row">
+            <div class="input-field col s4">
+              <i class="material-icons prefix" style="color: green;">account_circle</i>
+              <input name="first" id="first" type="text" class="validate" style="border-color: green;" required>
+              <label for="first" style="color: green;">First Name</label>
+            </div>
+
+            <div class="input-field col s4">
+              <i class="material-icons prefix" style="color: green;">account_circle</i>
+              <input name="last" id="last" type="text" class="validate" style="color: green ;border-color: green;"
+                required>
+              <label for="last" style="color: green;">Last Name</label>
+            </div>
+
+            <div class="input-field col s4">
+              <i class="material-icons prefix" style="color: green;">event</i>
+
+              <input type="text" name="Dob" id="dob" class="datepicker" style="color: green;" required>
+              <label for="dob" style="color: green;">BirthDate </label>
+            </div>
+          </div>
+          <!-- SECOND INPUT LINE -->
+          <div class="row">
+            <div class="input-field col s4">
+              <i class="material-icons prefix" style="color: green;">phone</i>
+              <input id="contactnumber" name="contactnumber" type="tel" class="validate" minlength="10" maxlength="10"
+                required pattern="[0-9]{10}" style="border-color: green;">
+              <label for="contactnumber" style="color: green;">Telephone No.</label>
+              <span class="helper-text" data-error="plz input valid mobile number" data-success="valid"></span>
+            </div>
+            <div class="input-field col s4">
+              <i class="material-icons prefix" style="color: green;">mail</i>
+              <input id="emailaddress" name="emailaddress" type="email" class="validate" style="border-color: green;"
+                required>
+              <label for="emailaddress" style="color: green;">Email</label>
+              <span class="helper-text" data-error="wrong" data-success="right"></span>
+            </div>
+            <div class="input-field col s4">
+              <div><span style="color: green;">Gender:</span></div>
+              <div><label>
+                  <input name="gender" value="Male" id="gender" type="radio" checked required />
+                  <span>Male</span>
+                </label>
+                <label>
+                  <input name="gender" id="gender" value="Female" type="radio" required />
+                  <span>Female</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- Third input Line -->
+          <div class="row">
+            <div class="col s12">
+              <div class="row">
+                <div class="input-field col s12" style="color: green;">
+                  <i class="material-icons prefix" style="color: green;">home</i>
+                  <input id="address" style="margin-top: -40px; margin-bottom: -60px;" type="text" name="address"
+                    class="materialize-textarea" style="color: green; border-color: green;" required>
+                  <label for="address" style="color: green; border-color: green;">Address</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Fourth Input Line -->
+          <div class="row">
+            <div class="input-field col s6">
+              <select name="state" style="color: green;" id="state" required>
+                <option value="" disabled selected style="color: green;">Choose your State </option>
+
+              </select>
+              <label style="color: green;">State</label>
+            </div>
+            <div class="input-field col s6">
+              <select name="city" style="color: green;" id="city" required>
+                <option value="" disabled selected style="color: green;">Choose your city</option>
+
+              </select>
+              <label style="color: green;">City</label>
+            </div>
+          </div>
+          <!-- Fifth Pic Line -->
+          <div class="row">
+            <div class="col s12">
+              <div class="file-field input-field">
+                <div class="btn" style="color:white; background-color:green;">
+                  <span>Picture</span>
+                  <input type="file" name="picture" id="picture">
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text">
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <!-- Submit Button Row -->
+          <div class="row button" style="margin-top: -1cm;">
+            <div class="col s6 buttonstyle">
+              <div>
+                <button class="btn waves-effect waves-light" type="submit" name="action"
+                  style=" color: white; background-color: green;" onclick="call()">Submit
+                  <i class="material-icons right">send</i>
+                </button>
+              </div>
+            </div>
+            <div class="col s6 buttonstyle">
+              <div>
+                <button class="btn waves-effect waves-light" type="reset" name="action1"
+                  style="color: white; background-color: green;">Reset
+                  <i class="material-icons right">autorenew</i>
+                </button>
+              </div>
+            </div>
+
+
+    </form>
+    <br><br>
+    <div class="row">
+      <div class="=cols"><br>
+        <% if (status==0) {%>
+          <h4>RECORD IS NOT SUBMITTED</h4>
+          <h4>
+            <%} else if(status==1){%>
+          </h4>
+          RECORD IS SUBMITTED
+
+          <%}%>
+
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+  </div>
+
+  </div>
+
+</body>
+
+</html>

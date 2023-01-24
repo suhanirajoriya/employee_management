@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="/stylesheets/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {   
+            $('.datepicker').datepicker();
+        });
+    </script>
+    <script src="/javascripts/project.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('select').formSelect();
+        });
+    </script>
+    <script>
+        function call() {
+            if (picture.value != '') {
+                alert("Record Submitted")
+            }
+            else {
+                alert("Record not Submitted")
+            }
+        }
+    </script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div>
+        <form action="/update_data" method="post">
+            <div class="maincontainers">
+                <div class="box">
+                    <!-- HEADING -->
+                    <div class="row">
+                        <div class="col s12 heading ">
+                            Employee Register
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="employeeid" id="employeeid" value="<%=result.employeeid%>">
+                    <%var name=result.employeename.split(' ')%>
+          <br>
+          <!-- FIRST INPUT LINE -->
+          <div class="row">
+            <div class="input-field col s4">
+              <i class="material-icons prefix" style="color: green;">account_circle</i>
+              <input name="first" id="first" type="text" class="validate" style="border-color: green;"  value="<%=name[0]%>"  required>
+              <label for="first" style="color: green;">First Name</label>
+            </div>
+
+            <div class="input-field col s4">
+              <i class="material-icons prefix" style="color: green;">account_circle</i>
+              <input name="last" id="last" type="text" class="validate" value="<%=name[1]%>"  style="color: green ;border-color: green;"
+                required>
+              <label for="last" style="color: green;">Last Name</label>
+            </div>
+
+            <div class="input-field col s4">
+              <i class="material-icons prefix" style="color: green;">event</i>
+
+              <input type="text" name="Dob" id="dob" class="datepicker" style="color: green;"  value="<%=result.Dob%>" required>
+              <label for="dob" style="color: green;">BirthDate </label>
+            </div>
+          </div>
+          <!-- SECOND INPUT LINE -->
+          <div class="row">
+            <div class="input-field col s4">
+              <i class="material-icons prefix" style="color: green;">phone</i>
+              <input id="contactnumber" name="contactnumber" type="tel" class="validate" minlength="10" maxlength="10"
+                required pattern="[0-9]{10}" style="border-color: green;" value="<%=result.contactnumber%>">
+              <label for="contactnumber" style="color: green;">Telephone No.</label>
+              <span class="helper-text" data-error="plz input valid mobile number" data-success="valid"></span>
+            </div>
+            <div class="input-field col s4">
+              <i class="material-icons prefix" style="color: green;">mail</i>
+              <input id="emailaddress" name="emailaddress" type="email" class="validate" style="border-color: green;" value="<%=result.emailaddress%>"required>
+              <label for="emailaddress" style="color: green;">Email</label>
+              <span class="helper-text" data-error="wrong" data-success="right"></span>
+            </div>
+
+                        <div class="input-field col s4">
+                            <%  var male=result.gender=='Male'?'checked':'' 
+                            var female=result.gender=='Female' ?'checked':'' %>
+                            <div><span style="color: green;">Gender:</span></div>
+                            <div><label>
+                                    <input name="gender" value="Male" id="gender" type="radio" required <%=male%>/>
+                                    <span>Male</span>
+                                </label>
+                                <label>
+                                    <input name="gender" id="gender" value="Female" type="radio" <%=female%> required />
+                                    <span>Female</span>
+                                </label>
+                            </div>
+                        </div>
+                </div>
+                <!-- Third input Line -->
+                <div class="row">
+                    <div class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12" style="color: green;">
+                                <i class="material-icons prefix" style="color: green;">home</i>
+                                <input id="address" style="margin-top: -40px; margin-bottom: -60px;" type="text"
+                                    name="address" value="<%=result.address%>">
+                                <label for="address" style="color: green; border-color: green;">Address</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fourth Input Line -->
+                <div class="row">
+                    <div class="input-field col s6">
+                        <select name="state" style="color: green;" id="state" required>
+                            <option value="" disabled selected style="color: green;">Choose your State </option>
+                            <option selected style="color: green;" value="<%=result.state%>"> <%=result.sname%></option>
+                        </select>
+                        <label style="color: green;">State</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <select name="city" style="color: green;" id="city" required>
+                            <option selected style="color: green;" value="<%=result.city%>"><%=result.cname%>  </option>
+
+                        </select>
+                        <label style="color: green;">City</label>
+                    </div>
+                </div>
+
+                <br>
+                <!-- Submit Button Row -->
+                <div class="row button">
+                    <div class="col s6 buttonstyle">
+                        <div>
+                            <button class="btn waves-effect waves-light" type="submit" name="action" value="Update"
+                                style=" color: white; background-color: green;">Update
+                                <i class="material-icons right">create</i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col s6 buttonstyle">
+                        <div>
+                            <button class="btn waves-effect waves-light" type="submit" name="action" value="Delete"
+                                style="color: white; background-color: green;">Delete
+                                <i class="material-icons right">delete</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+
+
+        </form>
+        <br><br>
+
+
+
+
+    </div>
+
+    </div>
+
+    </div>
+
+    </div>
+
+</body>
+
+</html>

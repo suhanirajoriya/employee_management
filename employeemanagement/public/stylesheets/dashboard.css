@@ -1,0 +1,59 @@
+.greenbox{
+    height: 19cm;
+    width: 8cm;
+    background: linear-gradient(to top, rgba(76, 199, 72, 0.8),rgba(11, 139, 6, 0.8));
+}
+
+.whitebox{
+
+    height: 21cm;
+    width: 33cm;
+    background: linear-gradient(to top, rgba(195, 202, 194, 0.8),rgba(250, 252, 250, 0.8));
+
+    margin-top: -20cm;
+    margin-left: 8cm;
+}
+.btnn{
+    width: 240px;
+    height: 40px;
+    background: green ;
+    border: none;
+    margin-top: 60px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+    margin-left: -0.2cm;
+}
+.btnn:hover{
+    background: #fff;
+    color: green;
+}
+.btnn a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.form .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.decorbtn{
+    background: linear-gradient(to top, rgba(76, 199, 72, 0.8),rgba(11, 139, 6, 0.8));
+    width:5cm;  
+    border-radius: 15px;
+     height:4cm ;
+     margin-top: -1.5cm;
+     margin-left: -0.9cm;
+}
+
+a {
+    color: black; 
+  }
+  .a:hover{
+    color: green;
+  }

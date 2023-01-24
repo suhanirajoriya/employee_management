@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.whitebox {
+
+    background-image: url('/images/grenback.webp');    
+    height: 20cm;
+    width: 40cm;
+    margin-top: -1cm;
+
+    background-size: cover;
+
+}
+
+.set {
+    display: flex;
+    flex-direction: row;
+}
+
+.logindiv {
+
+    width: 780px;
+    height: auto;
+    background-color: brown;
+    margin-left: 9cm;
+   padding: 2cm;
+    border-radius: 15px;
+    background: linear-gradient(to top, rgba(76, 199, 72, 0.8), rgba(11, 139, 6, 0.8));
+}
+
+.logindecor {
+
+    color: white;
+    margin-left: 5.5cm;
+margin-top: -0.5cm;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 40px;
+    
+}
+.rdiv{
+    width: 250px; margin-left:1cm; margin-top:1.5cm; display: flex;flex-direction: row;
+}
+.rdiv2{
+    width: 250px; margin-left:1cm; margin-top:0.4cm; display: flex;flex-direction: row;
+}
+
+.btn{
+    background-color: green;
+    margin-top: 1.1cm;
+    margin-left: 2.9cm;
+}
+.headdecor{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    margin-left: 9cm;
+    border-bottom: 4cm;
+    margin-bottom: -1.5cm;
+    color: green;
+    text-decoration-line: underline;
+ 
+}
+.msg{
+    margin-left: 2cm;
+    color: white;
+}

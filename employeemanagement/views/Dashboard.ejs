@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/dashboard.css">
+</head>
+
+<body>
+
+    <div class="greenbox">
+        <div style="display: flex; flex-direction: column; ">
+            <img src="/images/<%=result.Picture%>" width="100px" style="margin-left: 100px; margin-top:40px; ">
+            <h6 style="margin-left: 2.7cm;font-family: 'Times New Roman', Times, serif; font-size: 30px; ">
+                <%=result.adminname%>
+            </h6>
+
+        </div>
+
+        <div style="display: flex; flex-direction: row; ">
+            <a href="/employee/employeeinterface" target="mw"> <i class="material-icons right"
+                    style="margin-right: 250px; margin-top:70px;">person_add</i></a>
+            <a href="/employee/employeeinterface" target="mw">
+                <h6 style="margin-top:73px; margin-left:-6cm; ">Add Employee</h6>
+            </a>
+        </div>
+        <div style="display: flex; flex-direction: row; ">
+            <a href="/employee/display_employee" target="mw"> <i class="material-icons right"
+                    style="margin-right: 250px; margin-top:50px;">account_circle</i></a>
+            <a href="/employee/display_employee" target="mw">
+                <h6 style="margin-top:53px; margin-left:-6cm; ">Display Employee<h6>
+            </a>
+        </div>
+        <div style="display: flex; flex-direction: row; ">
+            <a href="/admin/logout" > <i class="material-icons right"
+                    style="margin-right: 250px; margin-top:50px;">exit_to_app</i></a>
+            <a href="/admin/logout" >
+                <h6 style="margin-top:53px; margin-left:-6cm; ">Logout<h6>
+            </a>
+        </div>
+\
+
+
+    </div>
+
+
+    <div class="whitebox">
+        <h6 style="margin-left: 20px;">WELCOME BACK!!!</h6>
+        <i class="material-icons right" style="margin-right: 870px; margin-top: -28px;">mood</i>
+        <iframe name="mw" frameBorder="0" width="1200px" height="750px"></iframe>
+    </div>
+
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+
+</html>
